@@ -15,7 +15,9 @@ Materials:
 
   - “Sensor modules” 
 
+.
 
+Steps:
 
 1. Use the RS485 CAN Hat on the Pi. Connect sensor modules.
 
