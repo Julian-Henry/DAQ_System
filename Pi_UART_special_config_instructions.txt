@@ -1,0 +1,22 @@
+Pi UART special config instructions
+This guide goes through how to set up backup UARTs on the Pi for use with a GPS or other sensor module that uses UART.
+WARNING: This may cause the CAN Hat to not work properly for some reason
+
+1. Enable UART:
+	In Pi terminal:
+	sudo raspi-config -> Interface options -> Serial port -> login shell question? NO -> Enable? YES! -> Ok -> reboot
+
+2. Update config to allow UARTS past UART0:
+	In the Pi terminal:
+	sudo nano /boot/config.txt
+	dtoverlay=uart# //add this line at the bottom of the file
+	Possibly reboot
+
+3. Check UART functionality:
+	In the Pi terminal:
+	raspi-gpio funcs //check which GPIOs have UART as alternate functions
+	raspi-gpio set [GPIO #s] a[alternate function number that is is GPIO]
+		For example: raspi-gpio set 12-13 a4 //enable UART5 (TXD5/RXD5)
+	Raspi-gpio get [GPIO #s] //check that the GPIOs are now doing the right function
+	ls -l /dev/AMA* //check that device is made. # after AMA tells which UART it is
+	//if this doesnt work, maybe try other UARTS, some gave me issues
