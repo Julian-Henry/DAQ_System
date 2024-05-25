@@ -15,6 +15,8 @@ Materials:
 
   - “Sensor modules” 
 
+
+
 1. Use the RS485 CAN Hat on the Pi. Connect sensor modules.
 
 2. Flash code to the Nucleo dev boards that are in charge of the sensors (files in the nucleo_firmware directory).
@@ -47,4 +49,4 @@ Materials:
 
 6. Go to the daq_gui_1 directory and run the daq_gui code (Use cargo run --release if it doesn’t work the normal way). It will take a long time to run the first time.
 
-7. Then it should work!
+7. Done. It should work!
