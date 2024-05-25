@@ -8,7 +8,7 @@ The purpose of the personal data acquisition prototype project is to design a da
 
 ## System setup guide
 
-# Materials: 
+Materials: 
   - Raspberry Pi with monitor, keyboard, and mouse. Make sure Its micro SD card has more than 8GB of space
 
   - RS485 CAN Hat
